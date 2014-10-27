@@ -1,0 +1,8 @@
+{
+    "name": "film.it",
+    "dependencies": {
+        "atoms" : "*",
+        "atoms-icons" : "*",
+        "hope" : "*"
+    }
+}

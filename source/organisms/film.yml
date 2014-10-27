@@ -1,0 +1,40 @@
+children:
+  - Organism.Header:
+      children:
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  events:
+                    - touch
+                  icon: back
+            style: left
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  events:
+                    - touch
+                  icon: star
+            style: right
+  - Organism.Section:
+      children:
+        - Atom.Figure:
+            style: big
+        - Molecule.Div:
+            children:
+              - Atom.Label:
+                  value: Title
+              - Atom.Label:
+                  value: Year
+              - Atom.Label:
+                  value: Description
+      id: details
+  - Organism.Section:
+      children:
+        - Molecule.List:
+            children: []
+            events:
+              - select
+            callbacks:
+              - onFilm
+      id: favorites
+id: film

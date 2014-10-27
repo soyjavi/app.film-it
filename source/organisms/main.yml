@@ -1,0 +1,52 @@
+children:
+  - Organism.Section:
+      children:
+        - Molecule.List:
+            children: []
+            events:
+              - select
+            callbacks:
+              - onFilm
+            bind:
+              entity: __.Entity.Search
+              atom: Atom.Li
+              create: true
+              update: true
+              destroy: true
+      id: search
+  - Organism.Header:
+      children:
+        - Atom.Heading:
+            size: h1
+            value: fim-it
+  - Organism.Footer:
+      children:
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  events:
+                    - touch
+                  icon: search
+                  path: main/search
+              - Atom.Button:
+                  events:
+                    - touch
+                  icon: star
+                  count: "10"
+                  path: main/favorites
+  - Organism.Section:
+      children:
+        - Molecule.List:
+            children: []
+            bind:
+              entity: __.Entity.Favorite
+              atom: Atom.Li
+              create: true
+              update: true
+              destroy: true
+      id: favorites
+  - Molecule.Search:
+      children: []
+      events:
+        - submit
+id: main
